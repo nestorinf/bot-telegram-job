@@ -1,7 +1,7 @@
 from dataclasses import replace
 import telebot
 import os
-bot = telebot.TeleBot("5464291860:AAFZxdeOeVqAuURdqZbw3O4oLfT5mOISFag")
+bot = telebot.TeleBot(os.environ.get('TELEGRAM_TOKEN'))
 
 def response(message, _msg):
     bot.reply_to(message, _msg)
